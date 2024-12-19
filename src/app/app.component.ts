@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'blog3';
+
+  title = 'MyBlogDemo';
+  isUserLoggedIn = false;
+
+  constructor(private authService: AuthService, private router : Router) {}
+
+  ngOnInit() {
+    let storeData = localStorage.getItem("isUserLoggedIn");
+      if( storeData != null && storeData == "true")
+        this.isUserLoggedIn = true;
+      else
+        this.isUserLoggedIn = false;
+  }
+
+  logout() {
+    this.authService.logout();
+    this.isUserLoggedIn = false;
+  }
 }

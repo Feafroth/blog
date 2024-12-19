@@ -1,0 +1,7 @@
+<form [formGroup]="credentials" (ngSubmit)="loginUser(credentials.value)">
+    <input type="email" id="email" formControlName = "email" placeholder="Email">
+    <input type="password" id="password" formControlName = "password" placeholder="Password">
+    <button type="submit">Login</button>
+</form>
+<div *ngIf="loginError">Login failed</div>
+<button (click)="loginWithGoogle()">Login With Google</button>
