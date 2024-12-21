@@ -1,1 +1,6 @@
-<p>blog-list works!</p>
+<div>
+    <input [(ngModel)]="tagsRequest"/><button (click)="prepareView()">Find</button>
+</div>
+<div class="preview-container">
+    <app-blog-preview *ngFor="let blogView of blogPreviewList" [blogView] = "blogView"></app-blog-preview>
+</div>

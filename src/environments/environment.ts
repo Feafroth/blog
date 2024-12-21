@@ -7,6 +7,17 @@ export const environment = {
         storageBucket: "myblogdatabase-86880.firebasestorage.app",
         messagingSenderId: "455844809588",
         appId: "1:455844809588:web:b5375ddab7d2e6a0ae7a21",
-        measurementId: "G-JY41Q9KXRK"
+        measurementId: "G-JY41Q9KXRK",
+        // databaseURL: "myblogdatabase-86880.firebaseapp.com",
     }
+
+    // firebase: {
+    //     apiKey: "AIzaSyB-U59p7XzRNOf2ndyllEA2VORRs44CmD8",
+    //     authDomain: "myblogdemo-4f321.firebaseapp.com",
+    //     projectId: "myblogdemo-4f321",
+    //     storageBucket: "myblogdemo-4f321.firebasestorage.app",
+    //     messagingSenderId: "1093810619331",
+    //     appId: "1:1093810619331:web:de54c0b61864290be47376",
+    //     // databaseURL: "myblogdemo-4f321.firebaseapp.com",
+    // }
   };

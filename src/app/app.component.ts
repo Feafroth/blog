@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
 
+import 'zone.js/plugins/zone-patch-rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -26,5 +28,6 @@ export class AppComponent {
   logout() {
     this.authService.logout();
     this.isUserLoggedIn = false;
+    this.router.navigate(["/"]);
   }
 }

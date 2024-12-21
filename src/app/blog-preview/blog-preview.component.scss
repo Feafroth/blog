@@ -1,0 +1,17 @@
+.blog-preview {
+    padding: 5px;
+    margin: 1px;
+    width: 250px; 
+    &:hover {
+        border: 1px salmon solid;
+        margin: 0;
+        cursor: pointer;
+    }
+    .footer {
+        display: flex;
+        div {
+            margin: 0 2px;
+        }
+    }
+}
+
