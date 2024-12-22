@@ -18,8 +18,8 @@ export class AppComponent {
   constructor(private authService: AuthService, private router : Router) {}
 
   ngOnInit() {
-    let storeData = localStorage.getItem("isUserLoggedIn");
-      if( storeData != null && storeData == "true")
+    let storeData = localStorage.getItem("User");
+      if( storeData != null && JSON.parse(storeData).isLogedIn == "true")
         this.isUserLoggedIn = true;
       else
         this.isUserLoggedIn = false;

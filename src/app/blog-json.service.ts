@@ -22,14 +22,20 @@ export class BlogJsonService {
     get(key: string): Blog {
       return this.blogsRef.filter((blog) => blog.key === key)[0];
     }
-    
+
     // create(tutorial: Blog): any {
     //   return this.blogsRef.push(tutorial);
     // }
   
-    // update(key: string, value: any): Promise<void> {
-    //   return this.blogsRef.update(key, value);
-    // }
+    update(key: string, value: any): Promise<void> {
+      const blog = this.blogsRef.find((blog) => blog.key === key);
+      if (blog !== undefined) {
+        const index = this.blogsRef.indexOf(blog);
+        this.blogsRef.splice(index, 1);
+        this.blogsRef.push(value);
+      }
+      return Promise.resolve();
+    }
   
     // delete(key: string): Promise<void> {
     //   return this.blogsRef.remove(key);

@@ -1,1 +1,19 @@
-<p>blog works! {{key}}</p>
+<h1>{{blog.title}}</h1>
+<p>{{blog.content}}</p>
+<div class="likes" *ngIf="isUserLoggedIn" (click)="toggleLike()"><img src="../../assets/heart_8274564.png" width="10px">{{blog.likes.length}}</div>
+<div class="footer" *ngIf="!isUserLoggedIn">
+    <div><img src="../../assets/heart_8274564.png" width="10px">{{blog.likes.length}}</div>
+</div>
+<div class="comments-block">
+    <div *ngFor="let comment of blog.comments">
+        <div class="title">
+            <div>{{comment.userName}}</div>
+            <div>{{comment.date | date:"dd.MM.yyy HH:mm"}}</div>
+        </div>
+        <div>{{comment.content}}</div>
+    </div>
+</div>
+<div *ngIf="isUserLoggedIn">
+    <div><textarea [(ngModel)]="comment"></textarea></div>
+    <div><button (click)="sendComment()">Comment</button></div>
+</div>

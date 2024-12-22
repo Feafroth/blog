@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+textarea {
+    width: 250px;
+    height: 100px;
+    resize: none;
+}
+
+.likes {
+    cursor: pointer;
+}
+
+.comments-block {
+    .title {
+        display: flex;
+    }
+}

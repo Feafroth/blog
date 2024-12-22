@@ -10,14 +10,4 @@ export const environment = {
         measurementId: "G-JY41Q9KXRK",
         // databaseURL: "myblogdatabase-86880.firebaseapp.com",
     }
-
-    // firebase: {
-    //     apiKey: "AIzaSyB-U59p7XzRNOf2ndyllEA2VORRs44CmD8",
-    //     authDomain: "myblogdemo-4f321.firebaseapp.com",
-    //     projectId: "myblogdemo-4f321",
-    //     storageBucket: "myblogdemo-4f321.firebasestorage.app",
-    //     messagingSenderId: "1093810619331",
-    //     appId: "1:1093810619331:web:de54c0b61864290be47376",
-    //     // databaseURL: "myblogdemo-4f321.firebaseapp.com",
-    // }
-  };
+};
